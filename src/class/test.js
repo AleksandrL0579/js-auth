@@ -1,5 +1,5 @@
-class Test {
-  test = 'Test'
-}
+// class Test {
+//   test = 'Test'
+// }
 
-module.exports = Test
+// module.exports = Test
