@@ -40,7 +40,7 @@ class User {
     // return user
   }
 
-  static getByEmail = (email) => {
+  static getByEmail(email) {
     return (
       this.#list.find(
         (user) =>
