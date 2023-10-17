@@ -5,13 +5,7 @@ router.get('/', function (req, res) {
   res.render('index', {
     name: 'index',
 
-    component: [
-      'back-button',
-      'field',
-      'field-password',
-      'field-checkbox',
-      'field-select',
-    ],
+    component: [],
 
     title: 'Index Page',
 
@@ -35,7 +29,7 @@ router.get('/logout', function (req, res) {
   res.render('logout', {
     name: 'logout',
 
-    component: [],
+    component: ['back-button', 'field'],
 
     title: 'Logout Page',
 
