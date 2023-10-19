@@ -1,3 +1,4 @@
+// Підключаємо роутер до бек-енду
 const express = require('express')
 const router = express.Router()
 
@@ -5,7 +6,13 @@ router.get('/', function (req, res) {
   res.render('index', {
     name: 'index',
 
-    component: [],
+    component: [
+      'back-button',
+      'field',
+      'field-password',
+      'field-checkbox',
+      'field-select',
+    ],
 
     title: 'Index Page',
 
@@ -38,12 +45,12 @@ router.get('/logout', function (req, res) {
 })
 
 const auth = require('./auth')
-
+const user = require('./user')
 // Підключіть інші файли роутів, якщо є
 // Об'єднайте файли роутів за потреби
 
 router.use('/', auth)
-
+router.use('/', user)
 // Використовуйте інші файли роутів, якщо є
 
 // Експортуємо глобальний роутер

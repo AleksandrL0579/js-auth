@@ -1,5 +1,3 @@
-
-
 @use '../../style' as s;
 
 :root {
@@ -9,11 +7,13 @@
 html {
   min-height: 100%;
   padding: 64px 0;
-
-  display: grid;
 }
 
-
+html {
+  min-height: 100%;
+  padding: 64px 0;
+  display: grid;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -35,10 +35,21 @@ body {
   width: 100%;
   height: 100%;
 
-
+  &--top {
+    display: flex;
+    flex-direction: column;
+  }
+  &__divider {
+    display: block;
+    border: none;
+    width: 100%;
+    margin: 0;
+    height: 1px;
+    background-color: s.color(divider);
+  }
 
   &--background {
-    background-image: url('/svg/background.svg');
+    background-image: url('/svg/backgroung.svg');
     background-repeat: no-repeat;
     background-position: top right;
   }
@@ -60,5 +71,4 @@ body {
     line-height: 150%;
     color: s.color(gray);
   }
-
 }
